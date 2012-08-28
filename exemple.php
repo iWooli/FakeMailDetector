@@ -1,5 +1,5 @@
 <?php
-require 'FakeMailDetector.php';
+require 'FakeMailDetector.class.php';
 
 //We declare two emails addresses for the test
 $badUserEmail = 'toto@yopmail.com';
