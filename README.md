@@ -1,7 +1,7 @@
 FakeMailDetector
 ================
 
-A very simple php class that helps to detect fake emails when users sign up.
+A very simple php class that helps to detect disposable email addresses (DEA) when users sign up.
 It already contains a certain number of undesired email domains.
 If you know more domains that are not listed here, your help will be appreciated.
 
