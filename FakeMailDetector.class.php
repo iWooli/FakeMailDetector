@@ -27,7 +27,8 @@ class FakeMailDetector {
 			'Spamfr',				'temporaryinbox',		'spamcorptastic',
 			'filzmail',				'lifebyfood',			'tempemail',
 			'spamfree24',			'spamherelots',			'thisisnotmyrealemail',
-			'slopsbox',				'tyldd',				'safetymail',			
+			'slopsbox',				'tyldd',				'safetymail',
+			'spamex',				'e4ward',				'gishpuppy',
 		);
 		if (in_array($this->domain, $bannedDomains)) return TRUE;
 		else return FALSE;
