@@ -3,7 +3,14 @@ class FakeMailDetector {
 	private $mail;
 	private $domain;
 	
-	public function lookInArray() {
+	public function __construct($mail) {
+		$this->mail = $mail;
+		$emaildomain = explode('@', $this->mail);
+		$this->domain = explode('.',$emaildomain[1]);
+		$this->domain = array_shift($this->domain);
+	}
+	
+	public function inBannedList() {
 		//array that contains only non desired domains name without their extention
 		$bannedDomains = array(
 			'jetable',				'ephemail',				'trashmail',
@@ -31,20 +38,6 @@ class FakeMailDetector {
 			'spamex',				'e4ward',				'gishpuppy',
 		);
 		if (in_array($this->domain, $bannedDomains)) return TRUE;
-		else return FALSE;
-	}
-
-	public function getDomain() {
-		$email = explode('@', $this->mail);
-		$this->domain = explode('.',$email[1]);
-		$this->domain = array_shift($this->domain);
-		if ($this->lookInArray()) return TRUE;
-		else return FALSE;
-	}
-
-	public function inBannedList($mail) {
-		$this->mail = $mail;
-		if ($this->getDomain()) return TRUE;
 		else return FALSE;
 	}
 }
