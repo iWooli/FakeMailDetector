@@ -13,4 +13,3 @@ if ($mail->inBannedList()) {
 } else {
 	echo $userEmail . ' seems to be a valid email address <br />';
 }
-}
